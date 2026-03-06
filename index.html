@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pt-BR" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Carta Clássica</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+  <style>
+    @keyframes sealBreak {
+      0% { transform: scale(1) rotate(0deg); opacity: 1; }
+      30% { transform: scale(1.2) rotate(-5deg); }
+      60% { transform: scale(0.8) rotate(10deg); opacity: 0.5; }
+      100% { transform: scale(0) rotate(45deg); opacity: 0; }
+    }
+    
+    @keyframes envelopeOpen {
+      0% { transform: rotateX(0deg); }
+      100% { transform: rotateX(180deg); }
+    }
+    
+    @keyframes letterRise {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-280px); }
+    }
+    
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    
+    .seal-break {
+      animation: sealBreak 0.6s ease-out forwards;
+    }
+    
+    .envelope-opening {
+      animation: envelopeOpen 0.8s ease-out 0.3s forwards;
+      transform-origin: top center;
+    }
+    
+    .letter-rising {
+      animation: letterRise 1s ease-out 0.8s forwards;
+    }
+    
+    .content-fade {
+      animation: fadeIn 0.8s ease-out 1.5s forwards;
+      opacity: 0;
+    }
+    
+    .tangerine {
+      font-family: 'Tangerine', cursive;
+    }
+    
+    .cormorant {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    
+    .paper-texture {
+      background: linear-gradient(135deg, #f5f0e6 0%, #ede4d4 50%, #f0e8da 100%);
+      box-shadow: inset 0 0 30px rgba(139, 119, 101, 0.1);
+    }
+    
+    .envelope-texture {
+      background: linear-gradient(145deg, #8b7355 0%, #6b5344 50%, #5a4636 100%);
+    }
+    
+    .wax-seal {
+      background: radial-gradient(circle at 30% 30%, #8b4444, #5c2828 60%, #3d1a1a 100%);
+      box-shadow: 
+        0 4px 8px rgba(0,0,0,0.4),
+        inset 0 2px 4px rgba(255,255,255,0.2),
+        inset 0 -2px 4px rgba(0,0,0,0.3);
+    }
+    .wax-seal:hover {
+      transform: scale(1.05);
+      box-shadow: 
+        0 6px 12px rgba(0,0,0,0.5),
+        inset 0 2px 4px rgba(255,255,255,0.3),
+        inset 0 -2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .envelope-flap {
+      background: linear-gradient(180deg, #7a6347 0%, #6b5344 100%);
+      transform-style: preserve-3d;
+    }
+    
+    .envelope-flap::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #5a4636 0%, #4a3828 100%);
+      transform: rotateX(180deg);
+      backface-visibility: hidden;
+    }
+
+    @keyframes pulse-glow {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.4), 0 0 0 0 rgba(139, 68, 68, 0.4);
+      }
+      70% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.5), 0 0 0 15px rgba(139, 68, 68, 0);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.4), 0 0 0 0 rgba(139, 68, 68, 0);
+      }
+    }
+
+    .animate-pulse-seal {
+      animation: pulse-glow 2s infinite ease-in-out;
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+ </head>
+ <body class="h-full bg-gradient-to-br from-stone-800 via-stone-700 to-stone-900 flex items-center justify-center overflow-auto p-4">
+  <div class="relative w-full max-w-2xl my-8">
+   <div id="envelope-container" class="relative">
+    <div class="envelope-texture rounded-lg shadow-2xl relative p-8">
+     <div class="absolute inset-0 rounded-lg" style="box-shadow: inset 0 0 40px rgba(0,0,0,0.2);"></div><div class="absolute top-8 left-8 z-10">
+      <p class="tangerine text-amber-100/90 text-5xl font-bold tracking-wide" id="recipient-display" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">Aline Wanessa</p>
+      <div class="w-40 h-px bg-gradient-to-r from-amber-200/40 to-transparent mt-2"></div>
+     </div><div class="absolute bottom-8 right-8 opacity-20">
+      <svg width="80" height="80" viewbox="0 0 60 60" fill="none">
+       <path d="M60 60 Q30 50 20 20 Q50 30 60 60" stroke="#d4c4a8" stroke-width="1" fill="none" /> <path d="M55 60 Q28 52 22 25 Q48 32 55 60" stroke="#d4c4a8" stroke-width="0.5" fill="none" />
+      </svg>
+     </div><div class="relative z-10 mt-32 mx-auto max-w-xl paper-texture rounded-lg shadow-lg p-10">
+      <div class="text-center mb-8">
+       <svg class="mx-auto w-12 h-12 text-stone-400/60" viewbox="0 0 60 60" fill="currentColor">
+        <path d="M30 5 C25 5 22 10 22 15 C22 20 25 25 28 28 L28 45 C28 47 26 48 24 48 C22 48 20 47 20 45 C20 43 22 42 22 42 L20 40 C18 42 16 44 16 47 C16 51 19 54 24 54 C29 54 32 51 32 47 L32 28 C35 25 38 20 38 15 C38 10 35 5 30 5 M30 8 C33 8 35 12 35 15 C35 18 33 22 30 24 C27 22 25 18 25 15 C25 12 27 8 30 8" />
+       </svg>
+      </div>
+      <p id="letter-text" class="cormorant text-stone-700 text-xl leading-relaxed text-center italic mb-8">"Entre todos os amores e amigos<br>De você me lembro mais..."</p>
+      <div class="text-right mb-6">
+       <p class="tangerine text-stone-500 text-3xl">Com afeto</p>
+      </div><div class="flex justify-center mt-10">
+        <button id="wax-seal" class="wax-seal animate-pulse-seal w-24 h-24 rounded-full cursor-pointer transition-all duration-300 flex items-center justify-center z-20 focus:outline-none focus:ring-2 focus:ring-amber-300/50 hover:shadow-lg" aria-label="Lacre de cera">
+          <svg class="w-16 h-16 text-stone-900/70" viewbox="0 0 60 60" fill="currentColor">
+           <path d="M30 8 C26 8 23 12 23 18 C23 24 27 30 30 34 C33 30 37 24 37 18 C37 12 34 8 30 8" opacity="0.9" /> <path d="M18 20 C16 16 18 12 22 12 C26 12 29 16 30 20 C26 22 22 22 18 20" opacity="0.8" /> <path d="M42 20 C44 16 42 12 38 12 C34 12 31 16 30 20 C34 22 38 22 42 20" opacity="0.8" /> <path d="M14 32 C10 30 10 26 14 24 C18 22 24 24 28 28 C24 32 18 34 14 32" opacity="0.7" /> <path d="M46 32 C50 30 50 26 46 24 C42 22 36 24 32 28 C36 32 42 34 46 32" opacity="0.7" /> <path d="M29 34 L29 52 C29 54 28 55 26 55 M31 34 L31 52 C31 54 32 55 34 55" stroke="currentColor" stroke-width="2" fill="none" opacity="0.6" /> <path d="M29 42 C24 40 20 42 18 46 C22 46 26 44 29 42" opacity="0.6" /> <path d="M31 44 C36 42 40 44 42 48 C38 48 34 46 31 44" opacity="0.6" />
+          </svg>
+          <div class="absolute inset-1 rounded-full border border-stone-900/20"></div>
+          <div class="absolute inset-2 rounded-full border border-stone-900/10"></div>
+        </button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <script>
+    const defaultConfig = {
+      recipient_name: 'Aline Wanessa',
+      letter_content: '"Entre todos os amores e amigos De você me lembro mais..."'
+    };
+    // Lógica do Clique com Redirecionamento Correto
+    document.getElementById('wax-seal').addEventListener('click', () => {
+      const seal = document.getElementById('wax-seal');
+      
+      // Para a animação de pulso para o selo "quebrar" limpo
+      seal.classList.remove('animate-pulse-seal'); 
+      seal.classList.add('seal-break');
+
+      setTimeout(() => {
+        document.body.style.transition = "opacity 1s ease";
+        document.body.style.opacity = "0";
+
+        setTimeout(() => {
+          window.location.href = "memorial.html";
+        }, 1000);
+      }, 600);
+    });
+  </script>
+ </body>
+</html>

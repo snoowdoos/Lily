@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Aniversário</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body class="bg-pink-50">
+
+  <section class="section-cake min-h-screen relative overflow-hidden">
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+      <div class="absolute top-10 left-10 animate-float balloon">
+        <svg width="60" height="80" viewBox="0 0 60 80">
+          <ellipse cx="30" cy="30" rx="25" ry="30" fill="#ff6b9d" />
+          <path d="M30 60 Q25 70 30 80 Q35 70 30 60" fill="#ff6b9d" />
+          <ellipse cx="22" cy="20" rx="8" ry="10" fill="rgba(255,255,255,0.3)" />
+        </svg>
+      </div>
+      <div class="absolute top-20 right-16 animate-float-delay balloon">
+        <svg width="50" height="70" viewBox="0 0 60 80">
+          <ellipse cx="30" cy="30" rx="25" ry="30" fill="#c44569" />
+          <path d="M30 60 Q25 70 30 80 Q35 70 30 60" fill="#c44569" />
+          <ellipse cx="22" cy="20" rx="8" ry="10" fill="rgba(255,255,255,0.3)" />
+        </svg>
+      </div>
+      <div class="absolute top-16 right-1/3 text-4xl animate-float"> ⭐ </div>
+      <div class="absolute bottom-1/4 left-12 text-3xl animate-float-delay"> ✨ </div>
+    </div>
+
+    <div class="relative z-10 flex flex-col items-center justify-center h-screen">
+      <div class="card-glass rounded-3xl p-12 md:p-20 max-w-sm w-full text-center animate-slide-up cake-shadow-box">
+        <div class="relative mx-auto animate-pulse-glow" style="width: 200px; height: 210px;">
+          <svg viewBox="0 0 150 160" class="w-full h-full cake-shadow-svg">
+            <ellipse cx="75" cy="145" rx="65" ry="12" fill="#e8b4bc" />
+            <rect x="10" y="100" width="130" height="45" rx="8" fill="url(#cakeGradient1)" />
+            <ellipse cx="75" cy="100" rx="55" ry="10" fill="#f5a0b8" />
+            <rect x="20" y="60" width="110" height="40" rx="6" fill="url(#cakeGradient2)" />
+            <ellipse cx="75" cy="60" rx="45" ry="8" fill="#ff9eb8" />
+            <rect x="30" y="30" width="90" height="30" rx="5" fill="#ffe0ed" />
+            <ellipse cx="75" cy="30" rx="45" ry="8" fill="#ffecf3" />
+
+            <path d="M25 100 Q30 115 25 120 Q20 115 25 100" fill="#fff" />
+            <path d="M50 100 Q55 120 50 130 Q45 120 50 100" fill="#fff" />
+            <path d="M100 100 Q105 118 100 125 Q95 118 100 100" fill="#fff" />
+            <path d="M125 100 Q130 112 125 118 Q120 112 125 100" fill="#fff" />
+
+            <circle cx="40" cy="80" r="4" fill="#ff6b9d" />
+            <circle cx="75" cy="85" r="4" fill="#c44569" />
+            <circle cx="110" cy="80" r="4" fill="#ff6b9d" />
+
+            <rect x="50" y="10" width="6" height="22" rx="2" fill="#ff9eb8" />
+            <rect x="72" y="5" width="6" height="27" rx="2" fill="#ffb6c1" />
+            <rect x="94" y="10" width="6" height="22" rx="2" fill="#ff9eb8" />
+
+            <g class="animate-candle">
+              <ellipse cx="53" cy="6" rx="4" ry="6" fill="#ffdd57" />
+              <ellipse cx="53" cy="4" rx="2" ry="3" fill="#fff" />
+            </g>
+            <g class="animate-candle" style="animation-delay: 0.1s;">
+              <ellipse cx="75" cy="1" rx="5" ry="7" fill="#ffdd57" />
+              <ellipse cx="75" cy="-1" rx="2.5" ry="3.5" fill="#fff" />
+            </g>
+            <g class="animate-candle" style="animation-delay: 0.2s;">
+              <ellipse cx="97" cy="6" rx="4" ry="6" fill="#ffdd57" />
+              <ellipse cx="97" cy="4" rx="2" ry="3" fill="#fff" />
+            </g>
+
+            <defs>
+              <linearGradient id="cakeGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#ffcce0;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#ffb8d4;stop-opacity:1" />
+              </linearGradient>
+              <linearGradient id="cakeGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#ffd6e8;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#ffc4dc;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <p class="mt-8 text-pink-400 font-medium animate-bounce text-sm">Role para baixo 🍰</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container mx-auto px-4">
+    <div class="content text-center py-10">
+      <h1 class="text-2xl font-bold text-pink-600">Entre todas as coisas que me fazem lembrar de você...</h1>
+    </div>
+
+    <div class="space-y-8">
+      <div class="item-lista">
+        <img src="img/batata.jpeg" alt="Batata frita">
+        <div class="texto-coluna">
+          <h2>Batata frita</h2>
+          <blockquote>Nunca mais comi uma Batata frita sem lembrar de você</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/rita.jpeg" alt="Rita Lee">
+        <div class="texto-coluna">
+          <h2>Rita Lee</h2>
+          <blockquote>Você tem algo de Rita Lee</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/borboleta.jpeg" alt="Borboleta">
+        <div class="texto-coluna">
+          <h2>Borboletas</h2>
+          <blockquote>Você disse que gostava </blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/frank.jpeg" alt="Frank Ocean">
+        <div class="texto-coluna">
+          <h2>Frank Ocean</h2>
+          <blockquote></blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/beladona.jpeg" alt="Beladona">
+        <div class="texto-coluna">
+          <h2>Beladona</h2>
+          <blockquote>Você disse que gostava de flores venenosas</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/fantasma.jpeg" alt="Fantasminha">
+        <div class="texto-coluna">
+          <h2>Fantasminha</h2>
+          <blockquote>cê tá igual o fantasminha camarada</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/draculaura.jpeg" alt="Draculaura">
+        <div class="texto-coluna">
+          <h2>Draculaura</h2>
+          <blockquote>Hiperfoco em vampiros</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/barreto.jpeg" alt="Barreto Mc">
+        <div class="texto-coluna">
+          <h2>Barretinho</h2>
+          <blockquote>Você tem cara de quem gosta de rap Barretinho é muito mídia</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/frase.jpeg" alt="Clarice Lispector">
+        <div class="texto-coluna">
+          <h2>Essa frase me lembrou você</h2>
+          <blockquote>"Uma vida inteira sendo eu e ainda é um misterio pra mim"</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/gata.jpeg" alt="Gatinha Marie">
+        <div class="texto-coluna">
+          <h2>Gatinha Marie</h2>
+          <blockquote>Alguma coisa no semblante me lembra</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/cerejinha.jpeg" alt="Cerejinha">
+        <div class="texto-coluna">
+          <h2>Cerejinha</h2>
+          <blockquote>Vocês parecem iguais em universos diferentes</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/brilhando.jpeg" alt="Edward Cullen">
+        <div class="texto-coluna">
+          <h2>Crepusculo</h2>
+          <blockquote>Especificamente Edward Cullen Brilhando ao sol</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/giz.jpeg" alt="giz pastel">
+        <div class="texto-coluna">
+          <h2>Giz</h2>
+          <blockquote>Simplesmente porque você gosta de pintar</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/cor.jpeg" alt="vinho">
+        <div class="texto-coluna">
+          <h2>Vinho</h2>
+          <blockquote>você me lembra essa cor</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/estela.jpeg" alt="Estela">
+        <div class="texto-coluna">
+          <h2>Estela/Estrela</h2>
+          <blockquote>A cachorrinha Estela</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/psicologia.jpeg" alt="Psicologia">
+        <div class="texto-coluna">
+          <h2>Psicologia</h2>
+          <blockquote>Você me contou que queria seguir nesse caminho, fiquei muito orgulhosa quando ouvi.</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/r15.jpeg" alt="r15">
+        <div class="texto-coluna">
+          <h2>R15</h2>
+          <blockquote>Sua moto dos sonhos que você ia me levar (sem capacete) para comer batatinha.</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/violet.jpeg" alt="Violet">
+        <div class="texto-coluna">
+          <h2>Violet</h2>
+          <blockquote>A maioria do Daniel me Lembra você</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/nerd.jpeg" alt="Nerds">
+        <div class="texto-coluna">
+          <h2>Nerds</h2>
+          <blockquote>É engraçado, lembro da irmã com cara de nerd</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/fraternidade.jpeg" alt="Fraternidade Belém">
+        <div class="texto-coluna">
+          <h2>Fraternidade Belém</h2>
+          <blockquote>Você sempre volta feliz de lá e com muita história pra contar</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/veu.jpeg" alt="Véu">
+        <div class="texto-coluna">
+          <h2>Véu</h2>
+          <blockquote>Você fica "brilhante" de véu; um brilhante discreto, mas ainda radiante</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/pazebem.jpeg" alt="Paz e bem">
+        <div class="texto-coluna">
+          <h2>Paz e bem</h2>
+          <blockquote>Pax et Bonum saudação de São Francisco</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/saojose.jpeg" alt="são José">
+        <div class="texto-coluna">
+          <h2>São José</h2>
+          <blockquote>Medalha que você encontrou</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/cafe.jpeg" alt="Café">
+        <div class="texto-coluna">
+          <h2>Cheiro de café adocicado</h2>
+          <blockquote>É um cheiro muito específico que me remete a você</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/luz.jpeg" alt="amarelo no verde">
+        <div class="texto-coluna">
+          <h2>fim de tarde e luz do sol no verde</h2>
+          <blockquote>Essa luz que entra pelas folhas combina com você</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/jubileu.jpeg" alt="Foto ônibus Jubileu dos comunicadores">
+        <div class="texto-coluna">
+          <h2>Jubileu dos Comunicadores</h2>
+          <blockquote>Essa foi a única foto que tirei no Jubileu. "Um reconhece o outro."</blockquote>
+        </div>
+      </div>
+    </div>
+
+    <div class="content text-center py-10">
+      <h1 class="text-2xl font-bold text-pink-600">Essas são as minhas favoritas</h1>
+    </div>
+
+    <div class="space-y-8">
+      <div class="item-lista">
+        <img src="img/lirio.jpeg" alt="Lírio">
+        <div class="texto-coluna">
+          <h2>Lírio</h2>
+          <blockquote>Beleza tão romântica quanto um lírio</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/teresinha.jpeg" alt="Santa Teresinha">
+        <div class="texto-coluna">
+          <h2>Santa Teresinha e Rosas</h2>
+          <blockquote>"Chuva de rosas no seu dia."</blockquote>
+        </div>
+      </div>
+
+      <div class="item-lista">
+        <img src="img/dino.jpeg" alt="Dino">
+        <div class="texto-coluna">
+          <h2>Dino</h2>
+          <blockquote>O papel de presente de Dinossauros</blockquote>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-botao">
+      <button class="botao-pergaminho" onclick="abrirjanela()">
+        <span>Clique aqui</span>
+      </button>
+    </div>
+
+    <div id="overlay" class="overlay hidden fixed inset-0 bg-black/50 z-40" onclick="fecharjanela()"></div>
+
+    <div id="janelapapel"
+      class="modal-papel hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-white p-8 rounded-lg max-w-lg w-[90%] max-h-[80vh] overflow-y-auto shadow-2xl">
+      <span class="fechar absolute top-4 right-4 text-2xl cursor-pointer" onclick="fecharjanela()">&times;</span>
+      <h2 class="text-xl font-bold text-amber-900">Carta de Recordações</h2>
+      <hr class="border-amber-800 my-4">
+      <div class="texto-carta text-gray-800 leading-relaxed">
+        <p>
+          Feliz aniversário, querida! <br>
+          ​Estou muito orgulhosa de você. Orgulhosa porque você não tem mais pesadelos nem
+          insônia, e porque, mesmo passando por tanta coisa este ano, continua seguindo em frente. Fico feliz que
+          tenha conseguido se destacar na Pascom; você vai se tornar coordena e sei que fará um trabalho incrível,
+          sendo a representante tanto dos antigos quanto, principalmente, dos novos agentes.​Espero que, neste ano,
+          você estude muito e consiga passar em Psicologia para fazer o que disse que queria: "fazer com que outras
+          pessoas se sintam ouvidas". É um trabalho lindo e sério. Estou assistindo à sua evolução de perto e ela foi
+          gigante até aqui desde os dias que te conhecei quando você entrava tímida para as reuniões e formações, a
+          época que te via chorar nos encontros de oração (você toda catarrenta assoando o nariz na calça!!), de cara
+          amarrada por algum motivo, com uma fofoca na ponta da língua, sorrindo ou com um senso de humor diferente,
+          mas engraçadinho, quando te olhava e você estava com os olhos escurecidos (sempre tive curiosidade de saber o
+          que se passava na sua cabeça nesses momentos). Lembro de quando
+          você me fazia passar raiva porque resolvia se afastar do nada e eu não entendia o motivo (fui aprendendo com
+          o tempo que você precisava desse espaço) e até hoje. Sei que você vai crescer ainda mais! Certas conversas
+          foram essenciais para a mim também. Obrigada por compartilhar comigo um pouco da sua vida.​<br>
+          Bom, seja muito feliz, garota!
+        </p>
+      </div>
+      <img src="img/buquelirio.jpg" alt="buque de lírios" class="imagem-carta mt-4 rounded-lg w-full">
+    </div>
+
+    <div class="flex justify-center w-full px-4 py-10">
+      <video src="img/gif.mp4" autoplay loop muted playsinline
+        class="w-full max-w-[400px] h-auto rounded-3xl shadow-2xl border-4 border-white/30"></video>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center my-12 px-4 space-y-6 w-full bg-gradient-to-b from-pink-50 to-pink-100/40 
+            py-16 rounded-3xl">
+
+    <p class="text-pink-500 text-sm italic text-center">
+      E tem uma parte de você que sempre vai tocar aqui… 🎧
+    </p>
+
+    <button onclick="mostrarIvy()" class="disco-btn">
+      <div class="disco" id="disco"></div>
+    </button>
+
+    <!-- Player Ivy -->
+    <div id="ivy-player" class="hidden w-full max-w-md bg-white/60 backdrop-blur-md 
+            p-4 rounded-2xl shadow-lg transition-all duration-500">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2ZWlPOoWh0626oTaHrnl2a?utm_source=generator" width="100%"
+        height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- Botão Best Part -->
+    <button id="btn-best" onclick="mostrarBest()"
+      class="text-xs text-pink-500 italic opacity-70 text-center mt-4 border border-pink-500 rounded-full px-3 py-1 hover:opacity-100 transition-all">
+      tem mais uma…
+    </button>
+
+    <!-- Player Best Part -->
+    <div id="best-player" class="hidden w-full max-w-md">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1Q7EgiMOuwDcB0PJC6AzON?utm_source=generator" width="100%"
+        height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+      </iframe>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
